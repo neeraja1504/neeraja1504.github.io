@@ -1,2 +1,5 @@
 theme: jekyll-theme-midnight
 title: Portfolio
+github:
+  is_project_page: false
+
