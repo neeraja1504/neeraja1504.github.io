@@ -37,5 +37,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
 
-### About
-I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. 
+## About
+I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. I am very passionate about Technology and Maths and love to learn new things. My current fields of interest are Machine Learning, Natural Language Processing specifically relating to Indian Languages. I strongly believe in building systems free of bias of all forms. You can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/)
