@@ -38,9 +38,8 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 
 ## About
-<img src="neerajapic.jpg" width="200" height="200">
-<br>
-<p style="clear:both;">I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. I am very passionate about Technology and Maths and love to learn new things. My current fields of interest are Machine Learning, Natural Language Processing specifically relating to Indian Languages. I strongly believe in building systems free of bias of all forms. You can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/)</p>
+
+I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. I am very passionate about Technology and Maths and love to learn new things. My current fields of interest are Machine Learning, Natural Language Processing specifically relating to Indian Languages. I strongly believe in building systems free of bias of all forms. You can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/)
 
 ## Projects
 1. Document Summarization
