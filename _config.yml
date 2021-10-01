@@ -1,6 +1,7 @@
 
 theme: jekyll-theme-minimal
 title: Portfolio
+logo: "neerajapic.png"
 github:
   is_project_page: false
   
