@@ -1,7 +1,8 @@
-github:
+
 theme: jekyll-theme-cayman
 title: Portfolio
-is_project_page: false
+github:
+  is_project_page: false
   
 
 
