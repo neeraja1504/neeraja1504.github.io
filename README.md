@@ -10,6 +10,9 @@ I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Tec
 - Used relationship extraction to find out relations.
 Check it out [here](https://github.com/neeraja1504/topicextraction)
 
+2. Research Intern at RBCDSAI-IITM: (Advised by Dr Ashish Tendulkar and Dr Balaraman Ravindran)
+- Working on GNNs to understand the protein structure in molecules in a better way.
+
 
 
 
