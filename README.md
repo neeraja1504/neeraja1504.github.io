@@ -11,7 +11,7 @@ I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Tec
 Check it out [here](https://github.com/neeraja1504/topicextraction)
 
 2. Research Intern at RBCDSAI-IITM: (Advised by Dr Ashish Tendulkar and Dr Balaraman Ravindran)
-- Working on GNNs to understand the protein structure in molecules in a better way.
+- Working on solving the class imbalance problem in Graph Neural Networks
 
 
 
@@ -27,4 +27,4 @@ Check it out [here](https://github.com/neeraja1504/topicextraction)
 "Occupational Gender Stereotypes in Indic Languages", WiNLP workshop at EMNLP 2021
 
 ## CV
-Here is a link to my [CV](https://drive.google.com/file/d/1ldeAoniVAS3Eo-ctRLJA1_gR79IzP6bi/view?usp=sharing)
+Here is a link to my [CV](https://drive.google.com/drive/folders/1-wS8Z3QGkN8YtVob9i55NzIu2e2ZVBFJ?usp=sharing)
