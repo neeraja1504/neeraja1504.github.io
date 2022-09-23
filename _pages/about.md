@@ -25,7 +25,7 @@ I am always open to research collaborations, so if you want to discuss projects 
 
 
 ---
-## Recent Updates
+<!-- ## Recent Updates
 [ 🌟: Important | 💡: Research Paper | 🎬: YouTube Video | 📆: Miscellaneous ]
 
 - 🌟 Aug 22, 2022: I begin my graduate studies at Georgia Tech. Hoping to reach new limits. 
@@ -67,4 +67,4 @@ I am always open to research collaborations, so if you want to discuss projects 
 - 🎬	Aug 29, 2021: Released our 13th stream on YouTube, having Shruti Jain present to us a amazing paper on [Zero-Shot Object Detection](https://www.youtube.com/watch?v=f-UELOTXlB4).
 
 
-- 💡 Aug 26, 2021: Our pre-print - [XCI-Sketch: Extraction of Color Information from Images for Generation of Colored Outlines and Sketches](https://arxiv.org/abs/2108.11554) is made public on arxiv.
+- 💡 Aug 26, 2021: Our pre-print - [XCI-Sketch: Extraction of Color Information from Images for Generation of Colored Outlines and Sketches](https://arxiv.org/abs/2108.11554) is made public on arxiv. -->
