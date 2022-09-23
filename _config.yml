@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Neeraja Kirtane"
 title_separator          : "-"
 name                     : &name "Neeraja"
-description              : &description "AI Research Intern at IISc Bangalore"
+description              : &description "Post-Bacc Fellow at IIT-M"
 url                      : https://neeraja1504.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "neeraja1504/neeraja1504.github.io"
@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Neeraja Kirtane"
-  avatar           : "profile.png"
-  bio              : "MSCS grad at Georgia Tech"
-  location         : "Atlanta"
+  avatar           : "Neeraja_photo.png"
+  bio              : "Post Bacc Fellow at IIT-M"
+  location         : 
   employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=p1AgiZcAAAAJ&hl=en"
-  email            : "sahil.khose@gatech.edu"
+  email            : "kirtane.neeraja@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,24 +96,24 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "sahilkhose"
+  github           : "neeraja1504"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "sahilkhose"
+  linkedin         : "neerajakirtane"
   orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "SahilKhose"
+  twitter          : "NeerajaKirtane"
   vine             :
   weibo            :
   xing             :
-  youtube          : "SahilKhose"
+  youtube          : 
   wikipedia        :
 
 
