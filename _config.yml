@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Sahil Khose"
+title                    : "Neeraja Kirtane"
 title_separator          : "-"
-name                     : &name "Sahil Khose"
+name                     : &name "Neeraja"
 description              : &description "AI Research Intern at IISc Bangalore"
-url                      : https://sahilkhose.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://neeraja1504.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "sahilkhose/sahilkhose.github.io"
+repository               : "neeraja1504/neeraja1504.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Sahil Khose"
+  name             : "Neeraja Kirtane"
   avatar           : "profile.png"
   bio              : "MSCS grad at Georgia Tech"
   location         : "Atlanta"
