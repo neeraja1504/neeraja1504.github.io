@@ -3,8 +3,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
+  # - title: "Talks"
+  #   url: /talks/    
 
   # - title: "Teaching"
   #   url: /teaching/    
@@ -12,12 +12,12 @@ main:
   # - title: "Projects"
   #   url: /portfolio/
         
-  - title: "Blog Posts"
-    url: /blog-posts/
+  # - title: "Blog Posts"
+  #   url: /blog-posts/
     
   - title: "CV"
     # url: /cv/
-    url: /files/Sahil_Khose.pdf
+    url: /files/NeerajaKirtane_September.pdf
     
-  - title: "Feed"
-    url: /feed/
+  # - title: "Feed"
+  #   url: /feed/
