@@ -8,6 +8,6 @@ venue: 'WiNLP, NAACL 2022'
 paperurl: 'http://www.winlp.org/wp-content/uploads/2021/11/winlp2021_36_Paper.pdf'
 # citation: 'Neeraja Kirtane and Tanvi Anand'
 ---
-* **Neeraja Kirtane** and Tanvi Anand<br><br>Devised a metric to calculate bias in gendered languages like Hindi and Marathi. Used this metric on ULMFiT language model and quantified the bias present.
+* **Neeraja Kirtane** and Tanvi Anand*<br><br>Devised a metric to calculate bias in gendered languages like Hindi and Marathi. Used this metric on ULMFiT language model and quantified the bias present.
 
 <!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
