@@ -8,6 +8,6 @@ venue: 'Under Review'
 paperurl: 'https://arxiv.org/abs/2209.03661'
 # citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
-**Neeraja Kirtane**, Aditya Kane, V Manushree*<br><br> Quantified bias in Hindi Language model- Muril.Efficiently finetuned by unfreezing less than 1 percent of the parameters. Results showed that debiasing reduced the bias.
+**Neeraja Kirtane**, Aditya Kane, V Manushree<br><br> Quantified bias in Hindi Language model- Muril.Efficiently finetuned by unfreezing less than 1 percent of the parameters. Results showed that debiasing reduced the bias.
 
 <!-- Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2). -->
