@@ -1,7 +1,7 @@
 ---
 title: "Mitigating gender stereotypes in Hindi and Marathi"
 collection: publications
-permalink: /publication/2021-08-26-paper-title-number-3
+permalink: /publication/paper-title-number-3
 # excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
 # date: 2021-08-26
 venue: 'GeBNLP,ACL 2022'
