@@ -7,8 +7,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. Currently I am interning at the Robert Bosch Centre for Data Science and Artifical Intelligence(RBCDSAI) at IIT Chennai, where I am working on graph DL. I am very passionate about Technology and Maths and love to learn new things. Previously I have worked on finding and mitigating gender bias from text data. I have specifically worked in Hindi and Marathi languages to address this gender bias issue. I strongly believe that technology should not be just restricted to English speakers and should be available to all. Also, these systems should be free from bias of all forms. \
+I am Neeraja Kirtane. I am currently a Post Baccalaureate fellow at RBCDSAI, IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
+<br>
+
+My research interests lie in NLP and Graph Deep Learning. I am specifically interested in Fairness in NLP as well working on low resource and gendered languages in NLP. I believe in socially aware and ethically responsible AI systems. 
+
+<br>
+
 If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/)
+
+<!-- I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. Currently I am interning at the Robert Bosch Centre for Data Science and Artifical Intelligence(RBCDSAI) at IIT Chennai, where I am working on graph DL. I am very passionate about Technology and Maths and love to learn new things. Previously I have worked on finding and mitigating gender bias from text data. I have specifically worked in Hindi and Marathi languages to address this gender bias issue. I strongly believe that technology should not be just restricted to English speakers and should be available to all. Also, these systems should be free from bias of all forms. \
+If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/) -->
 
 <!-- Hello, I'm am currently a student at [Georgia Institute of Technology](https://www.gatech.edu/) pursuing my [MS in Computer Science](https://www.cc.gatech.edu/degree-programs/master-science-computer-science). I completed my undergraduate studies in Computer and Communication Engineering at [Manipal Institute of Technology](https://manipal.edu/mit.html) in Manipal, Karnataka, India. 
 <br>
