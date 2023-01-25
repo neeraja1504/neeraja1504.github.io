@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2022-04-05-paper-title-number-5
 # excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
 # date: 2022-04-05
-venue: 'Under Review'
+venue: 'GCLR workshop, AAAI 2023'
 # paperurl: 'https://arxiv.org/abs/2203.11899'
 # citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
