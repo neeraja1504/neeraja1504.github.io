@@ -3,8 +3,8 @@ title: "Mitigating gender stereotypes in Hindi and Marathi"
 collection: publications
 permalink: /publication/paper-title-number-3
 # excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-# date: 2021-08-26
-venue: 'GeBNLP, NAACL 2022'
+date: 2022-08-26
+venue: 'GeBNLP, NAACL'
 paperurl: 'https://arxiv.org/pdf/2205.05901.pdf'
 # citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
 ---
