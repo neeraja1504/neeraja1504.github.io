@@ -1,3 +1,4 @@
+---
 title: "Hidden Voices: Reducing gender data gap, one Wikipedia article at a time"
 collection: publications
 permalink: /publication/2023-04-15-paper-title-number-6
