@@ -7,13 +7,13 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am Neeraja Kirtane. I am an incoming MSCS student at the University of Illinois Urbana Champaign. I am currently working with Prof. Hao Peng.Previously I was Post Baccalaureate fellow at RBCDSAI, IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
+I am Neeraja Kirtane. I am a MSCS student at the University of Illinois Urbana Champaign. I am currently working with [Prof. Hao Peng](https://haopeng-nlp.github.io/). Previously I was Post Baccalaureate fellow at RBCDSAI, IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
 <br>
 
 My research interests lie in NLP and Graph Deep Learning. I am specifically interested in Fairness in NLP as well working on low resource and gendered languages in NLP. I believe in socially aware and ethically responsible AI systems. 
 <br>
 
-I worked with Dr Balaraman Ravindran and Dr Rajashree Baskaran on the project Hidden Voices. This is an open-source project with the initial goal of building intelligent tools to aid in adding 10,000 women's biography drafts to Wikipedia. Its aim is to make a positive impact on gender representation among digital sources and to reduce the gender data gap. Previously I have worked on finding out occupational stereotypes and mitigating the bias in Hindi and Marathi language models.
+I worked with Dr Balaraman Ravindran and Dr Rajashree Baskaran on the project Hidden Voices. This is an open-source project with the initial goal of building intelligent tools to aid in adding 10,000 women's biography drafts to Wikipedia. Its aim is to make a positive impact on gender representation among digital sources and to reduce the gender data gap. Previously, I have worked on finding out occupational stereotypes and mitigating the bias in Hindi and Marathi language models.
 
 I am currently looking for internships for summer 2024 in the field of Machine Learning and NLP.
 
