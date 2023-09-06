@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am Neeraja Kirtane. I am an incoming MSCS student at the University of Illinois Urbana Champaign. Previously I was Post Baccalaureate fellow at RBCDSAI, IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
+I am Neeraja Kirtane. I am an incoming MSCS student at the University of Illinois Urbana Champaign. I am currently working with Prof. Hao Peng.Previously I was Post Baccalaureate fellow at RBCDSAI, IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
 <br>
 
 My research interests lie in NLP and Graph Deep Learning. I am specifically interested in Fairness in NLP as well working on low resource and gendered languages in NLP. I believe in socially aware and ethically responsible AI systems. 
