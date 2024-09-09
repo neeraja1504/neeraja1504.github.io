@@ -7,12 +7,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am Neeraja Kirtane. I am a first-year [MSCS](https://cs.illinois.edu/academics/graduate/ms-program) student at the University of Illinois Urbana Champaign. I am currently advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/). My current research interests lie in making NLP models trustworthy and efficient. Previously, I was a Post Baccalaureate fellow at the Robert Bosch Centre for Data Science and AI [RBCDSAI](https://rbcdsai.iitm.ac.in/), IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
+I am Neeraja Kirtane. I am a second-year [MSCS](https://cs.illinois.edu/academics/graduate/ms-program) student at the University of Illinois Urbana Champaign. I am currently advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and closely collaborating with [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek). My current research interests lie in making NLP models trustworthy and efficient. Previously, I was a Post Baccalaureate fellow at the Robert Bosch Centre for Data Science and AI [RBCDSAI](https://rbcdsai.iitm.ac.in/), IITM Chennai. I completed my undergraduate studies in Computer Science and Engineering from Manipal Institute of Technology in Manipal, Karnataka, India.
 <br>
 
 I worked with Prof. Balaraman Ravindran and Dr Rajashree Baskaran on the project [Hidden Voices](https://hidden-voices.github.io/). This is an open-source project with the initial goal of building intelligent tools to aid in adding 10,000 women's biography drafts to Wikipedia. It aims to make a positive impact on gender representation among digital sources and to reduce the gender data gap. Previously in my undergraduate studies, I have worked on finding out occupational stereotypes and mitigating the gender bias in Hindi and Marathi language models.
 
-I am currently looking for internships for summer 2024 in the field of Machine Learning and NLP.
 
 If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). Check out my work in my [CV](https://neeraja1504.github.io/files/Neeraja_CV_Jan%20(1).pdf). 
 
