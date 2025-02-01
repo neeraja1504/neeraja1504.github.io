@@ -1,5 +1,5 @@
 ---
-title: "FactCheckmate: Preemptively Detecting and Mitigating Hallucinations in LMs"
+title: "LLMs are Vulnerable to Malicious Prompts Disguised as Scientific Language"
 collection: publications
 permalink: /publication/jailbreaking
 date: 2025-01-25
