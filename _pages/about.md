@@ -19,7 +19,9 @@ Previously, I was a Post Baccalaureate fellow at the Robert Bosch Centre for Dat
 If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). Check out my work in my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV_2025_Jan.pdf)
 <br>
 
-I am looking for PhD positions in NLP for Fall 2025. If you feel I am a right fit, please contact me. 
+I am looking for job opportunities in AI safety applications. If you feel I am a right fit, please contact me.
+
+<!-- I am looking for PhD positions in NLP for Fall 2025. If you feel I am a right fit, please contact me.  -->
 
 <!-- I am Neeraja Kirtane, a final year undergrad student at Manipal Institute of Technology, Manipal. Currently I am interning at the Robert Bosch Centre for Data Science and Artifical Intelligence(RBCDSAI) at IIT Chennai, where I am working on graph DL. I am very passionate about Technology and Maths and love to learn new things. Previously I have worked on finding and mitigating gender bias from text data. I have specifically worked in Hindi and Marathi languages to address this gender bias issue. I strongly believe that technology should not be just restricted to English speakers and should be available to all. Also, these systems should be free from bias of all forms. My research interests lie in NLP and Graph Deep Learning. I am specifically interested in Fairness in NLP as well working on low resource and gendered languages in NLP. I believe in socially aware and ethically responsible AI systems. \
 If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/) --> 
