@@ -30,7 +30,7 @@ Previously, I was a Post Baccalaureate fellow at the Robert Bosch Centre for Dat
 <!-- If you like my work or want to collaborate with me, you can get in touch with me via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). Check out my work in my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV_2025_Jan.pdf)
 <br>
 
-I am looking for job opportunities in AI safety applications. If you feel I am a right fit, please contact me. --> -->
+I am looking for job opportunities in AI safety applications. If you feel I am a right fit, please contact me. --> 
 
 <!-- I am looking for PhD positions in NLP for Fall 2025. If you feel I am a right fit, please contact me.  -->
 
