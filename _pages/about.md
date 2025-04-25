@@ -7,6 +7,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
+I’m Neeraja Kirtane, a second-year Master’s student in Computer Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
+
+My research focuses on making natural language processing (NLP) models more trustworthy and interpretable. Recently, I worked on preemptively detecting and mitigating hallucinations in large language models (LLMs) by analyzing their hidden states [paper link](https://arxiv.org/pdf/2410.02899). I am also exploring methods for jailbreaking LLMs to generate harmful content and developing strategies to counteract such vulnerabilities [paper link](https://arxiv.org/pdf/2501.14073).
+
+Prior to UIUC, I was a Post-Baccalaureate Research Fellow at the Robert Bosch Centre for Data Science and AI [(RBCDSAI)](https://rbcdsai.iitm.ac.in/) at IIT Madras, where I was advised by [Prof. Balaraman Ravindran](https://dsai.iitm.ac.in/~ravi/) There, I developed automated machine learning tools to generate Wikipedia biographies for notable women in STEM.
+
+I am currently seeking full-time opportunities in the areas of AI safety, robustness, and trustworthy machine learning.
+
+If you are interested in my work or would like to collaborate, feel free to reach out via via [Email](kirtane.neeraja@gmail.com) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can also view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV_2025_Jan.pdf) for more details.
+
+
 I am Neeraja Kirtane. I am a second-year [MSCS](https://cs.illinois.edu/academics/graduate/ms-program) student at the University of Illinois Urbana Champaign. I am currently advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and closely collaborating with [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek). My current research interests lie in making NLP models trustworthy and interpretable. Recently I worked on preemptively detecting and mitigating hallucinations in LLMs by analysing the hidden states of the model [(link)](https://arxiv.org/pdf/2410.02899). I am also working on jailbreaking LLMs to produce harmful content [(link)](https://arxiv.org/pdf/2501.14073).
 <br>
 
