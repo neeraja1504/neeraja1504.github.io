@@ -18,7 +18,7 @@ At UIUC, I worked on projects aimed at improving trust and accountability in LLM
 
 - **[FactCheckmate](https://arxiv.org/pdf/2410.02899)** – a framework for preemptively detecting and mitigating hallucinations in LLMs by analyzing their hidden-state dynamics and identifying early indicators of factual inconsistency.
 
--**[Jailbreaking LLMs](https://arxiv.org/pdf/2501.14073)** – a study of scientific-sounding adversarial prompts that can elicit biased or toxic model responses, revealing deeper vulnerabilities in instruction-following and safety alignment.
+- **[Jailbreaking LLMs](https://arxiv.org/pdf/2501.14073)** – a study of scientific-sounding adversarial prompts that can elicit biased or toxic model responses, revealing deeper vulnerabilities in instruction-following and safety alignment.
 
 
 
