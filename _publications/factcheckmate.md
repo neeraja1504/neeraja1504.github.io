@@ -3,10 +3,10 @@ title: "FactCheckmate: Preemptively Detecting and Mitigating Hallucinations in L
 collection: publications
 permalink: /publication/factcheckmate
 date: 2024-10-02
-venue: "Under Review"
+venue: "EMNLP Findings"
 paperurl: "https://arxiv.org/pdf/2410.02899"
 # citation: 'Neeraja Kirtane and Tanvi Anand'
 ---
-**Neeraja Kirtane***, Deema Alnuhait*, Muhammad Khalifa, Hao Peng
+ Deema Alnuhait*, **Neeraja Kirtane***,, Muhammad Khalifa, Hao Peng
 
 <!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
