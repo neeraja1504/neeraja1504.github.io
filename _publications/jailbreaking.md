@@ -7,4 +7,4 @@ venue: "SoLAR workshop at COLM"
 paperurl: "https://arxiv.org/pdf/2501.14073"
 # citation: 'Neeraja Kirtane and Tanvi Anand'
 ---
-Yubin Ge*,**Neeraja Kirtane** *,Hao Peng, Dilek Hakkani-Tür
+Yubin Ge*,**Neeraja Kirtane** *,Hao Peng, Dilek Hakkani-Tür (* - equal contribution)

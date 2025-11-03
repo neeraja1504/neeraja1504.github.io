@@ -7,4 +7,4 @@ venue: "Under Review"
 paperurl: "https://wikiworkshop.org/2023/papers/WikiWorkshop2023_paper_23.pdf"
 # citation: 'Neeraja Kirtane and Tanvi Anand'
 ---
-**Neeraja Kirtane***, Yuvraj Khanna*, Peter Relan
+**Neeraja Kirtane** *, Yuvraj Khanna *, Peter Relan (* - equal contribution)
