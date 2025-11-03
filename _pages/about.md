@@ -37,7 +37,7 @@ Previously, I was a **Post-Baccalaureate Research Fellow** at the [Robert Bosch 
 
 I’m currently seeking **PhD opportunities** or **full-time research roles** in _AI safety, robustness, and interpretability_.
 
-If you’re interested in my work or would like to collaborate, feel free to reach out via [Email](mailto:kirtane3@illinois.edu) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can also view my [CV](neeraja1504/neeraja1504.github.io/files/NeerajaKiranKirtane_CV_Oct_2025.pdf) for more details.
+If you’re interested in my work or would like to collaborate, feel free to reach out via [Email](mailto:kirtane3@illinois.edu) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can also view my [CV](neeraja1504/neeraja1504.github.io/files/NeerajaKiranKirtane_CV_Nov_2025.pdf) for more details.
 
 <!-- I’m Neeraja Kirtane, a second-year Master’s student in Computer Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
 
