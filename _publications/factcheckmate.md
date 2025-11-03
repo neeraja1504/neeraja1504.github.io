@@ -2,7 +2,7 @@
 title: "FactCheckmate: Preemptively Detecting and Mitigating Hallucinations in LMs"
 collection: publications
 permalink: /publication/factcheckmate
-date: 2024-10-02
+date: 2025-10-02
 venue: "EMNLP Findings"
 paperurl: "https://arxiv.org/pdf/2410.02899"
 # citation: 'Neeraja Kirtane and Tanvi Anand'
