@@ -7,8 +7,22 @@ redirect_from:
   - /about/
   - /about.html
 ---
+I’m Neeraja Kirtane, my research is focused on building trustworthy and interpretable language models. My work lies at the intersection of AI safety, robustness, and interpretability, with the goal of making large language models (LLMs) more reliable and transparent. 
 
-I’m **Neeraja Kirtane**, a recent **MSCS graduate** from the University of Illinois Urbana-Champaign (UIUC), where I was advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
+I’m currently a Research Engineer at **[MathGPT.ai](https://mathgpt.ai)**, where I’m developing education-centric reasoning benchmarks to evaluate reasoning robustness in state-of-the-art models. My [work](https://arxiv.org/pdf/2510.06430?) explores how simple linguistic or contextual changes can destabilize model reasoning — and how fine-tuning small language models (SLMs) can improve their consistency and usefulness in AI tutoring and educational applications.
+
+Alongside this, I am working under the supervision of **[Prof. Kuan-Hao Huang](https://khhuang.me/)** at Texas A&M University to probe reasoning and multilingual generalization in LLMs. Using interpretability tools such as neuron activation analysis and feature attribution, we are studying how models encode reasoning processes across languages and how these representations transfer between linguistic systems.
+
+Before this, I completed my M.S. in Computer Science at the University of Illinois Urbana–Champaign (UIUC), where I was advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
+At UIUC, I worked on projects aimed at improving trust and accountability in LLMs:
+
+- **[FactCheckmate](https://arxiv.org/pdf/2410.02899)** – a framework for preemptively detecting and mitigating hallucinations in LLMs by analyzing their hidden-state dynamics and identifying early indicators of factual inconsistency.
+
+-**[Jailbreaking LLMs](https://arxiv.org/pdf/2501.14073)** – a study of scientific-sounding adversarial prompts that can elicit biased or toxic model responses, revealing deeper vulnerabilities in instruction-following and safety alignment.
+
+
+
+<!-- I’m **Neeraja Kirtane**, a recent **MSCS graduate** from the University of Illinois Urbana-Champaign (UIUC), where I was advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
 
 My research focuses on building **trustworthy and interpretable NLP systems**. At UIUC, I worked on:
 
@@ -19,7 +33,7 @@ Currently, I am:
 - Collaborating with **[Prof. Kuan-Hao Huang](https://khhuang.me/)** (Texas A&M University) on probing reasoning in **multilingual LLMs** using interpretability tools.
 - Interning at **[MathGPT.ai](https://mathgpt.ai)**, where I’m developing a **benchmark** to evaluate the reasoning robustness of SOTA models and fine-tuning **small language models (SLMs)** for AI tutoring needs and applications.
 
-Previously, I was a **Post-Baccalaureate Research Fellow** at the [Robert Bosch Centre for Data Science and AI (RBCDSAI)](https://rbcdsai.iitm.ac.in/) at **IIT Madras**, advised by [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/), where I built intelligent tools to generate Wikipedia biographies for women in STEM.
+Previously, I was a **Post-Baccalaureate Research Fellow** at the [Robert Bosch Centre for Data Science and AI (RBCDSAI)](https://rbcdsai.iitm.ac.in/) at **IIT Madras**, advised by [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/), where I built intelligent tools to generate Wikipedia biographies for women in STEM. -->
 
 I’m currently seeking **PhD opportunities** or **full-time research roles** in _AI safety, robustness, and interpretability_.
 
