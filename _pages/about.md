@@ -21,7 +21,7 @@ At UIUC, I worked on projects aimed at improving trust and accountability in LLM
 - **[Jailbreaking LLMs](https://arxiv.org/pdf/2501.14073)** – a study of scientific-sounding adversarial prompts that can elicit biased or toxic model responses, revealing deeper vulnerabilities in instruction-following and safety alignment.
 
 
-Previously, I worked as a Research Assistant at IIT Madras under Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/?originalSubdomain=in)
+Previously, I worked as a Research Assistant at IIT Madras under [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/?originalSubdomain=in)
 
 <!-- I’m **Neeraja Kirtane**, a recent **MSCS graduate** from the University of Illinois Urbana-Champaign (UIUC), where I was advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
 
