@@ -36,7 +36,10 @@ Currently, I am:
 
 Previously, I was a **Post-Baccalaureate Research Fellow** at the [Robert Bosch Centre for Data Science and AI (RBCDSAI)](https://rbcdsai.iitm.ac.in/) at **IIT Madras**, advised by [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/), where I built intelligent tools to generate Wikipedia biographies for women in STEM. -->
 
-I’m currently seeking **PhD opportunities** or **full-time research roles** in _AI safety, robustness, and interpretability_.
+Outside of research, you’ll find me lifting at the gym or exploring food spots wherever I go.
+
+I’m currently seeking **PhD opportunities** in  _Interpretability, AI safety_.
+
 
 If you’re interested in my work or would like to collaborate, feel free to reach out via [Email](mailto:kirtane3@illinois.edu) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can view my [CV](neeraja1504/neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf) for more details.
 
