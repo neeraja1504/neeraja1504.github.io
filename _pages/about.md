@@ -7,7 +7,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I’m Neeraja Kirtane, my research is focused on building trustworthy and interpretable language models. My work lies at the intersection of AI safety, robustness, and interpretability, with the goal of making large language models (LLMs) more reliable and transparent. 
+I'm Neeraja Kirtane, a researcher focused on understanding *how* large language models represent and process information — and using that understanding to make them more reliable, safe, and controllable. My work spans mechanistic interpretability, cross-lingual generalization, and hallucination detection, with a long-term goal of building AI systems that are transparent by design.
+
+My current work with **[Prof. Kuan-Hao Huang](https://khhuang.me/)** at Texas A&M University investigates how reasoning and linguistic knowledge are encoded across languages in LLMs. Using [steering vectors](https://arxiv.org/abs/2602.02326) and representation analysis, we study how these internal representations transfer between linguistic systems — and how to intervene on them precisely.
+
+Alongside this, I work as a Research Engineer at **[MathGPT.ai](https://mathgpt.ai)**, developing education-centric reasoning benchmarks to evaluate how simple linguistic or contextual changes can destabilize model reasoning — and how fine-tuning SLMs can improve their consistency in AI tutoring applications ([paper](https://arxiv.org/pdf/2510.06430)).
+
+Before this, I completed my M.S. at UIUC advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek), with publications at **EMNLP Findings 2025** and the **COLM 2025 SoLaR workshop** on [hallucination detection via hidden-state probing](https://arxiv.org/pdf/2410.02899) and [adversarial jailbreaking](https://arxiv.org/pdf/2501.14073). Earlier, I was a Post-Baccalaureate Research Fellow at [RBCDSAI, IIT Madras](https://rbcdsai.iitm.ac.in/) under [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/).
+
+Feel free to reach out via [Email](mailto:kirtane.neeraja@gmail.com), or view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf). When I'm not at my desk, you'll find me lifting at the gym or exploring food spots wherever I go.
+
+<!-- I’m Neeraja Kirtane, my research is focused on building trustworthy and interpretable language models. My work lies at the intersection of AI safety, robustness, and interpretability, with the goal of making large language models (LLMs) more reliable and transparent. 
 
 I’m currently a Research Engineer at **[MathGPT.ai](https://mathgpt.ai)**, where I’m developing education-centric reasoning benchmarks to evaluate reasoning robustness in state-of-the-art models. My [work](https://arxiv.org/pdf/2510.06430?) explores how simple linguistic or contextual changes can destabilize model reasoning — and how fine-tuning small language models (SLMs) can improve their consistency and usefulness in AI tutoring and educational applications.
 
@@ -21,7 +31,7 @@ At UIUC, I worked on projects aimed at improving trust and accountability in LLM
 - **[Jailbreaking LLMs](https://arxiv.org/pdf/2501.14073)** – a study of scientific-sounding adversarial prompts that can elicit biased or toxic model responses, revealing deeper vulnerabilities in instruction-following and safety alignment.
 
 
-Previously, I worked as a Research Assistant at IIT Madras under [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/?originalSubdomain=in)
+Previously, I worked as a Research Assistant at IIT Madras under [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/?originalSubdomain=in) -->
 
 <!-- I’m **Neeraja Kirtane**, a recent **MSCS graduate** from the University of Illinois Urbana-Champaign (UIUC), where I was advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
 
@@ -36,12 +46,12 @@ Currently, I am:
 
 Previously, I was a **Post-Baccalaureate Research Fellow** at the [Robert Bosch Centre for Data Science and AI (RBCDSAI)](https://rbcdsai.iitm.ac.in/) at **IIT Madras**, advised by [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/), where I built intelligent tools to generate Wikipedia biographies for women in STEM. -->
 
-Outside of research, you’ll find me lifting at the gym or exploring food spots wherever I go.
+<!-- Outside of research, you’ll find me lifting at the gym or exploring food spots wherever I go.
 
 I’m currently seeking **PhD opportunities** in  _Interpretability, AI safety_.
 
 
-If you’re interested in my work or would like to collaborate, feel free to reach out via [Email](mailto:kirtane3@illinois.edu) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can view my [CV](neeraja1504/neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf) for more details.
+If you’re interested in my work or would like to collaborate, feel free to reach out via [Email](mailto:kirtane3@illinois.edu) or [LinkedIn](https://www.linkedin.com/in/neeraja-kirtane-16353b2a/). You can view my [CV](neeraja1504/neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf) for more details. -->
 
 <!-- I’m Neeraja Kirtane, a second-year Master’s student in Computer Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek).
 
