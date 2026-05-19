@@ -7,7 +7,17 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I'm Neeraja Kirtane, a researcher focused on understanding *how* large language models represent and process information and using that understanding to make them more reliable, safe, and controllable. My work spans mechanistic interpretability, cross-lingual generalization, and hallucination detection, with a long-term goal of building AI systems that are transparent by design.
+I am an incoming Computer Science Ph.D. student at Texas A&M University, where I am fortunate to be advised by [Prof. Kuan-Hao Huang](https://khhuang.me/). My research focuses on understanding *how* large language models represent and process information internally, using those insights to make them fundamentally more reliable, safe, and controllable. My broader research interests span mechanistic interpretability, cross-lingual generalization, and hallucination detection, with the long-term goal of building AI systems that are transparent by design.
+
+Prior to starting my Ph.D., I completed my M.S. at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek). My master's research focused on [hallucination detection via hidden-state probing](https://arxiv.org/pdf/2410.02899) and understanding [adversarial jailbreaking dynamics](https://arxiv.org/pdf/2501.14073).
+
+Alongside my academic track, I previously worked as a Research Engineer at [MathGPT.ai](https://mathgpt.ai), where I developed education-centric reasoning benchmarks to evaluate how minor linguistic or contextual changes can destabilize model reasoning, and explored how fine-tuning Small Language Models (SLMs) can improve consistency in tutoring applications ([paper](https://arxiv.org/pdf/2510.06430)). Earlier in my research journey, I was a Post-Baccalaureate Research Fellow at RBCDSAI, IIT Madras, working with [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/).
+
+When I'm not looking at hidden states or training classifiers, you can find me lifting at the gym or hunting down the best food spots in town.
+
+**Let's Connect!** If you are interested in collaborating on mechanistic interpretability, model controllability, or LLM safety, please feel free to reach out via [Email](mailto:kirtane.neeraja@gmail.com) or view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf).
+
+<!-- I'm Neeraja Kirtane, a researcher focused on understanding *how* large language models represent and process information and using that understanding to make them more reliable, safe, and controllable. My work spans mechanistic interpretability, cross-lingual generalization, and hallucination detection, with a long-term goal of building AI systems that are transparent by design.
 
 My current work with **[Prof. Kuan-Hao Huang](https://khhuang.me/)** at Texas A&M University investigates how reasoning and linguistic knowledge are encoded across languages in LLMs. Using [steering vectors](https://arxiv.org/abs/2602.02326) and representation analysis, we study how these internal representations transfer between linguistic systems and how to intervene on them precisely.
 
@@ -15,7 +25,7 @@ Alongside this, I work as a Research Engineer at **[MathGPT.ai](https://mathgpt.
 
 Before this, I completed my M.S. at UIUC advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek), with publications at **EMNLP Findings 2025** and the **COLM 2025 SoLaR workshop** on [hallucination detection via hidden-state probing](https://arxiv.org/pdf/2410.02899) and [adversarial jailbreaking](https://arxiv.org/pdf/2501.14073). Earlier, I was a Post-Baccalaureate Research Fellow at [RBCDSAI, IIT Madras](https://rbcdsai.iitm.ac.in/) under [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/).
 
-Feel free to reach out via [Email](mailto:kirtane.neeraja@gmail.com), or view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf). When I'm not at my desk, you'll find me lifting at the gym or exploring food spots wherever I go.
+Feel free to reach out via [Email](mailto:kirtane.neeraja@gmail.com), or view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf). When I'm not at my desk, you'll find me lifting at the gym or exploring food spots wherever I go. -->
 
 <!-- I’m Neeraja Kirtane, my research is focused on building trustworthy and interpretable language models. My work lies at the intersection of AI safety, robustness, and interpretability, with the goal of making large language models (LLMs) more reliable and transparent. 
 
