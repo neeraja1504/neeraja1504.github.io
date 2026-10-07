@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TAPER Reader</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+KR:wght@400;600&family=Noto+Sans+SC:wght@400;600&display=swap">
+<style>
+/* Layout: a reading desk. Controls on top, the two language panels side by side, the study check-in underneath. */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #eef0f4;
+  --fg: #1d2129;
+  --muted: #5d6573;
+  --line: #dde1e8;
+  --native: #9a5300;        /* amber: the reader's language */
+  --native-chip: #ffe7b8;
+  --native-soft: #fff6e4;
+  --english: #154f9c;       /* blue: the English original */
+  --english-chip: #d7e7fb;
+  --english-soft: #eef5fe;
+  --ok: #1d7a4b;
+  --warn: #a33a2b;
+  --focus: #3b6fd8;
+  --font-ui: "IBM Plex Sans", "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-read: "Literata", "Noto Serif", Georgia, "Noto Sans SC", "Noto Sans KR", "Noto Sans Devanagari", serif;
+  --font-cjk: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-kr: "Noto Sans KR", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-deva: "Noto Sans Devanagari", "Nirmala UI", "Mangal", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171c; --surface: #1c2027; --surface-2: #252a33; --fg: #e7e9ee; --muted: #9aa3b2; --line: #313844;
+    --native: #f2b866; --native-chip: #4a3414; --native-soft: #2a2218;
+    --english: #8dbcf5; --english-chip: #1b3557; --english-soft: #18222f;
+    --ok: #5fc995; --warn: #f08a7a; --focus: #7aa5f5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171c; --surface: #1c2027; --surface-2: #252a33; --fg: #e7e9ee; --muted: #9aa3b2; --line: #313844;
+  --native: #f2b866; --native-chip: #4a3414; --native-soft: #2a2218;
+  --english: #8dbcf5; --english-chip: #1b3557; --english-soft: #18222f;
+  --ok: #5fc995; --warn: #f08a7a; --focus: #7aa5f5;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+.reader { display: grid; gap: 18px; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-ui); font-size: 15px; line-height: 1.5; margin: 0; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 48px; display: grid; gap: 18px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.label { font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+
+/* header */
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; }
+.brand h1 { font-size: 26px; font-weight: 700; letter-spacing: .02em; }
+.brand h1 span { color: var(--native); }
+.brand h1 b { color: var(--english); font-weight: 700; }
+.brand p { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+
+/* controls */
+.controls { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 14px; }
+.row { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: end; }
+.field { display: grid; gap: 4px; min-width: 0; }
+select, input[type="text"], input[type="number"], input[type="password"], textarea {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 6px 9px; font-size: 14px;
+}
+textarea { width: 100%; resize: vertical; line-height: 1.5; }
+.levels { display: grid; gap: 6px; flex: 1 1 420px; min-width: 0; }
+.levels-head { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+.level-name { font-weight: 600; font-size: 14px; }
+input[type="range"] { width: 100%; accent-color: var(--native); }
+.ticks { display: grid; grid-template-columns: repeat(7, 1fr); font-size: 11px; color: var(--muted); text-align: center; }
+.ticks span:first-child { text-align: left; } .ticks span:last-child { text-align: right; }
+.toggles { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
+.toggles label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+details.custom { font-size: 14px; }
+details.custom summary { cursor: pointer; color: var(--muted); }
+details.custom .row { margin-top: 10px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 7px; padding: 6px 12px; cursor: pointer; font-weight: 500; font-size: 14px; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--english); border-color: var(--english); color: var(--surface); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn:disabled { opacity: .5; cursor: default; }
+
+/* panels */
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.panels.stacked { grid-template-columns: 1fr; }
+.panels.single { grid-template-columns: 1fr; }
+@media (max-width: 860px) { .panels { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px 22px; min-width: 0; }
+.panel-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.pip { width: 6px; height: 16px; border-radius: 3px; background: var(--native); }
+.panel.en .pip { background: var(--english); }
+.panel-head .what { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.panel-head .sub { font-size: 13px; color: var(--muted); }
+.panel h2 { font-family: var(--font-read); font-weight: 600; font-size: 19px; margin-bottom: 8px; }
+.text { font-family: var(--font-read); font-size: 18.5px; line-height: 1.85; max-width: 68ch; overflow-wrap: anywhere; }
+.text:lang(zh) { font-family: var(--font-cjk); font-size: 18px; }
+.text:lang(ko) { font-family: var(--font-kr); font-size: 18px; word-break: keep-all; }
+.text:lang(hi) { font-family: var(--font-deva); }
+.sent { border-radius: 4px; transition: background-color .12s; padding: 1px 0; }
+.sent.as-en { color: var(--english); }
+.sent.shl { background: var(--surface-2); }
+.term { border-radius: 5px; padding: 1px 5px; font-weight: 600; cursor: pointer; border: 0; font: inherit; font-weight: 600; line-height: inherit;
+  background: var(--native-chip); color: var(--native); }
+.term.en-term { background: var(--english-chip); color: var(--english); }
+.term.native-term { background: var(--native-soft); color: var(--native); font-weight: 500; box-shadow: inset 0 -1.5px 0 var(--native-chip); }
+.term .gl { font-weight: 500; opacity: .8; font-size: .85em; }
+.term.hl { outline: 2px solid currentColor; outline-offset: 1px; }
+.panel.en .text { font-family: var(--font-read); }
+
+/* share bar */
+.share { display: grid; gap: 6px; }
+.share-top { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.share-top strong { color: var(--fg); font-variant-numeric: tabular-nums; }
+.bar { position: relative; height: 12px; border-radius: 99px; background: var(--english-chip); overflow: hidden; }
+.bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--native-chip); transition: width .3s; }
+.bar .mark { position: absolute; top: 0; bottom: 0; width: 3px; background: var(--native); border-radius: 2px; transition: left .3s; }
+.share-foot { display: flex; justify-content: space-between; font-size: 13px; }
+.share-foot .n { color: var(--native); } .share-foot .e { color: var(--english); }
+.weeks { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* popover */
+.pop { position: fixed; z-index: 20; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 8px 24px rgb(0 0 0 / .16);
+  padding: 10px 12px; max-width: min(320px, calc(100vw - 32px)); display: grid; gap: 4px; font-size: 14px; }
+.pop .en { color: var(--english); font-weight: 600; }
+.pop .na { color: var(--native); font-weight: 600; font-size: 16px; }
+
+/* check-in, cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; display: grid; gap: 14px; min-width: 0; }
+.card h3 { font-size: 16px; }
+.card p.hint { margin: 0; color: var(--muted); font-size: 14px; }
+.q { display: grid; gap: 6px; }
+.q legend { font-weight: 500; padding: 0; margin-bottom: 4px; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+.opts label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px 24px; }
+.result { font-size: 14px; }
+.result.ok { color: var(--ok); } .result.bad { color: var(--warn); }
+.note { font-size: 13px; color: var(--muted); border-left: 3px solid var(--native-chip); padding: 4px 10px; background: var(--native-soft); border-radius: 0 6px 6px 0; }
+.status { font-size: 14px; color: var(--muted); }
+.status.bad { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1><span>TA</span><b>PER</b></h1>
+      <p>Translation-Assisted Progressive English Reading</p>
+    </div>
+  </header>
+
+  <!-- READER -->
+  <section id="view-reader" class="view reader">
+    <div class="controls">
+      <div class="row">
+        <div class="field"><span class="label">Passage</span><select id="passage"></select></div>
+        <div class="field"><span class="label">Native language</span><select id="lang"></select></div>
+        <div class="field"><span class="label">Week</span><input id="week" type="number" min="1" max="12" value="1" style="width:76px"></div>
+        <button class="btn" id="applyWeek" title="Set the translation level the 12-week schedule recommends">Use week schedule</button>
+      </div>
+      <div class="row">
+        <div class="levels">
+          <div class="levels-head"><span class="label">Translation level</span><span class="level-name" id="levelName"></span></div>
+          <input id="level" type="range" min="0" max="6" step="1" value="2" aria-describedby="levelName">
+          <div class="ticks"><span>All native</span><span>Glossed</span><span>Terms EN</span><span>25%</span><span>50%</span><span>75%</span><span>All English</span></div>
+        </div>
+      </div>
+      <details class="custom" id="customBox">
+        <summary>Fine-tune the level (custom)</summary>
+        <div class="row">
+          <div class="field"><span class="label">Technical terms</span>
+            <select id="termMode">
+              <option value="native">Translate them</option>
+              <option value="gloss">Translate, English in brackets</option>
+              <option value="english">Keep in English</option>
+            </select>
+          </div>
+          <div class="field" style="flex:1 1 240px"><span class="label">Sentences in English: <span id="shareVal">0%</span></span>
+            <input id="share" type="range" min="0" max="100" step="5" value="0">
+          </div>
+        </div>
+      </details>
+      <div class="toggles">
+        <label><input type="checkbox" id="showOriginal" checked> Show English original</label>
+        <label><input type="checkbox" id="stacked"> Stack panels</label>
+        <label><input type="checkbox" id="linkHover" checked> Link sentences on hover</label>
+      </div>
+    </div>
+
+    <div class="panels" id="panels">
+      <article class="panel na" id="panelNative">
+        <div class="panel-head"><span class="pip"></span><span class="what">What the reader sees</span><span class="sub" id="nativeSub"></span></div>
+        <h2 id="nativeTitle"></h2>
+        <div class="text" id="nativeText"></div>
+      </article>
+      <article class="panel en" id="panelEnglish">
+        <div class="panel-head"><span class="pip"></span><span class="what">The original</span><span class="sub">full English</span></div>
+        <h2 id="englishTitle"></h2>
+        <div class="text" id="englishText" lang="en"></div>
+      </article>
+    </div>
+
+    <div class="share">
+      <div class="share-top"><span>Native-language share of what the reader sees</span><span><strong id="sharePct">0%</strong> native · <strong id="lookups">0</strong> term lookups this passage</span></div>
+      <div class="bar"><div class="fill" id="shareFill"></div><div class="mark" id="shareMark"></div></div>
+      <div class="share-foot"><span class="n" id="langEnd">Vietnamese</span><span class="weeks" id="weekLabel">Week 1 · Week 6 · Week 12</span><span class="e">English</span></div>
+    </div>
+
+    <div class="row" id="doneRow"><button class="btn primary" id="doneReading">Done reading: start check-in</button><span class="status">The text is hidden during the check-in so answers come from memory.</span></div>
+
+    <div class="card" id="checkin" hidden>
+      <div>
+        <h3>Check your understanding</h3>
+        <p class="hint">Answer from memory to see how much you understood. Then go back to the text or pick another passage or level.</p>
+      </div>
+      <div id="quiz" class="two"></div>
+      <div class="row"><button class="btn primary" id="submitCheck">Check my answers</button><button class="btn" id="backToText">Back to the text</button><span class="result" id="checkResult"></span></div>
+    </div>
+  </section>
+</div>
+
+<script>
+/* =====================================================================
+   CONTENT — edit or add passages here.
+   In "en" and "tr", wrap each technical term as [[key]]. The key is the
+   English term and must appear in both sentences and in "terms".
+   ===================================================================== */
+const LANGS = {
+  vi: { name: "Vietnamese", self: "Tiếng Việt", tag: "vi" },
+  es: { name: "Spanish", self: "Español", tag: "es" },
+  zh: { name: "Chinese (Simplified)", self: "中文", tag: "zh" },
+  hi: { name: "Hindi", self: "हिन्दी", tag: "hi" },
+  ko: { name: "Korean", self: "한국어", tag: "ko" }
+};
+
+const PASSAGES = [
+  {
+    id: "ml-training",
+    title: { en: "Training a transformer model", vi: "Huấn luyện mô hình transformer", es: "Entrenamiento de un modelo transformer", zh: "训练 transformer 模型", hi: "ट्रांसफ़ॉर्मर मॉडल का प्रशिक्षण", ko: "트랜스포머 모델 학습" },
+    sentences: [
+      { en: "We train a [[transformer]] model with [[self-attention]] on a large [[dataset]].",
+        tr: { vi: "Chúng tôi huấn luyện một mô hình [[transformer]] với [[self-attention]] trên một [[dataset]] lớn.",
+              es: "Entrenamos un modelo [[transformer]] con [[self-attention]] sobre un [[dataset]] grande.",
+              zh: "我们在一个大型[[dataset]]上训练一个带有[[self-attention]]的[[transformer]]模型。",
+              hi: "हम एक बड़े [[dataset]] पर [[self-attention]] के साथ एक [[transformer]] मॉडल को प्रशिक्षित करते हैं।",
+              ko: "우리는 대규모 [[dataset]]에서 [[self-attention]]을 사용하는 [[transformer]] 모델을 학습합니다." } },
+      { en: "The [[gradient descent]] optimizer minimizes the [[loss function]], and we tune the [[learning rate]] to avoid [[overfitting]].",
+        tr: { vi: "Bộ tối ưu [[gradient descent]] giảm thiểu [[loss function]], và chúng tôi điều chỉnh [[learning rate]] để tránh [[overfitting]].",
+              es: "El optimizador de [[gradient descent]] minimiza la [[loss function]], y ajustamos la [[learning rate]] para evitar el [[overfitting]].",
+              zh: "[[gradient descent]]优化器最小化[[loss function]]，我们调整[[learning rate]]以避免[[overfitting]]。",
+              hi: "[[gradient descent]] ऑप्टिमाइज़र [[loss function]] को न्यूनतम करता है, और हम [[overfitting]] से बचने के लिए [[learning rate]] को समायोजित करते हैं।",
+              ko: "[[gradient descent]] 옵티마이저는 [[loss function]]의 값을 최소화하며, [[overfitting]]을 피하기 위해 [[learning rate]] 값을 조정합니다." } },
+      { en: "We evaluate the model with [[cross-validation]].",
+        tr: { vi: "Chúng tôi đánh giá mô hình bằng [[cross-validation]].",
+              es: "Evaluamos el modelo con [[cross-validation]].",
+              zh: "我们用[[cross-validation]]评估模型。",
+              hi: "हम [[cross-validation]] के साथ मॉडल का मूल्यांकन करते हैं।",
+              ko: "우리는 [[cross-validation]]으로 모델을 평가합니다." } },
+      { en: "Each training [[batch]] contains 256 examples, and the model sees the full [[dataset]] once per [[epoch]].",
+        tr: { vi: "Mỗi [[batch]] huấn luyện chứa 256 mẫu, và mô hình đi qua toàn bộ [[dataset]] một lần trong mỗi [[epoch]].",
+              es: "Cada [[batch]] de entrenamiento contiene 256 ejemplos, y el modelo recorre el [[dataset]] completo una vez por [[epoch]].",
+              zh: "每个训练[[batch]]包含256个样本，模型在每个[[epoch]]中完整遍历一次[[dataset]]。",
+              hi: "प्रत्येक प्रशिक्षण [[batch]] में 256 उदाहरण होते हैं, और मॉडल हर [[epoch]] में पूरे [[dataset]] को एक बार देखता है।",
+              ko: "각 학습 [[batch]]에는 256개의 예제가 있으며, 모델은 [[epoch]]마다 전체 [[dataset]]을 한 번씩 학습합니다." } },
+      { en: "When the validation loss stops improving, we apply [[early stopping]] and keep the best [[checkpoint]].",
+        tr: { vi: "Khi sai số trên tập kiểm định không còn giảm, chúng tôi áp dụng [[early stopping]] và giữ lại [[checkpoint]] tốt nhất.",
+              es: "Cuando la pérdida de validación deja de mejorar, aplicamos [[early stopping]] y conservamos el mejor [[checkpoint]].",
+              zh: "当验证损失不再下降时，我们采用[[early stopping]]并保留最佳的[[checkpoint]]。",
+              hi: "जब वैलिडेशन लॉस में सुधार रुक जाता है, तो हम [[early stopping]] लागू करते हैं और सबसे अच्छा [[checkpoint]] रखते हैं।",
+              ko: "검증 손실이 더 이상 개선되지 않으면 [[early stopping]] 기법을 적용하고 가장 좋은 [[checkpoint]]를 보관합니다." } }
+    ],
+    terms: {
+      "transformer":      { vi: "bộ biến đổi", es: "transformador", zh: "变换器", hi: "ट्रांसफ़ॉर्मर", ko: "트랜스포머" },
+      "self-attention":   { vi: "tự chú ý", es: "autoatención", zh: "自注意力", hi: "स्व-ध्यान", ko: "셀프 어텐션" },
+      "dataset":          { vi: "tập dữ liệu", es: "conjunto de datos", zh: "数据集", hi: "डेटा संग्रह", ko: "데이터셋" },
+      "gradient descent": { vi: "hạ gradient", es: "descenso de gradiente", zh: "梯度下降", hi: "प्रवणता अवरोहण", ko: "경사 하강법" },
+      "loss function":    { vi: "hàm mất mát", es: "función de pérdida", zh: "损失函数", hi: "हानि फलन", ko: "손실 함수" },
+      "learning rate":    { vi: "tốc độ học", es: "tasa de aprendizaje", zh: "学习率", hi: "सीखने की दर", ko: "학습률" },
+      "overfitting":      { vi: "quá khớp", es: "sobreajuste", zh: "过拟合", hi: "अति-अनुकूलन", ko: "과적합" },
+      "cross-validation": { vi: "kiểm định chéo", es: "validación cruzada", zh: "交叉验证", hi: "क्रॉस-सत्यापन", ko: "교차 검증" },
+      "batch":            { vi: "lô", es: "lote", zh: "批次", hi: "समूह", ko: "배치" },
+      "epoch":            { vi: "vòng huấn luyện", es: "época", zh: "轮次", hi: "चक्र", ko: "에폭" },
+      "early stopping":   { vi: "dừng sớm", es: "parada temprana", zh: "早停", hi: "शीघ्र रोक", ko: "조기 종료" },
+      "checkpoint":       { vi: "điểm lưu", es: "punto de control", zh: "检查点", hi: "जाँच बिंदु", ko: "체크포인트" }
+    },
+    quiz: [
+      { q: "What do the authors adjust to avoid overfitting?", options: ["The learning rate", "The number of examples per batch", "The size of the dataset", "The validation set"], answer: 0 },
+      { q: "When do they apply early stopping?", options: ["After every batch", "When the validation loss stops improving", "Before cross-validation", "Once the dataset has been seen 256 times"], answer: 1 }
+    ]
+  },
+  {
+    id: "user-study",
+    title: { en: "Analyzing a user study", vi: "Phân tích một nghiên cứu người dùng", es: "Análisis de un estudio con usuarios", zh: "分析一项用户研究", hi: "एक उपयोगकर्ता अध्ययन का विश्लेषण", ko: "사용자 연구 분석" },
+    sentences: [
+      { en: "We ran a [[within-subjects]] study with 24 participants.",
+        tr: { vi: "Chúng tôi tiến hành một nghiên cứu [[within-subjects]] với 24 người tham gia.",
+              es: "Realizamos un estudio [[within-subjects]] con 24 participantes.",
+              zh: "我们进行了一项有24名参与者的[[within-subjects]]研究。",
+              hi: "हमने 24 प्रतिभागियों के साथ एक [[within-subjects]] अध्ययन किया।",
+              ko: "우리는 24명의 참가자를 대상으로 [[within-subjects]] 연구를 수행했습니다." } },
+      { en: "The order of conditions was [[counterbalanced]] to reduce [[learning effects]].",
+        tr: { vi: "Thứ tự các điều kiện được [[counterbalanced]] để giảm [[learning effects]].",
+              es: "El orden de las condiciones fue [[counterbalanced]] para reducir los [[learning effects]].",
+              zh: "实验条件的顺序经过了[[counterbalanced]]处理，以减少[[learning effects]]。",
+              hi: "[[learning effects]] को कम करने के लिए स्थितियों के क्रम को [[counterbalanced]] किया गया।",
+              ko: "[[learning effects]]를 줄이기 위해 조건의 순서를 [[counterbalanced]] 방식으로 배치했습니다." } },
+      { en: "We compared task completion times using a [[paired t-test]].",
+        tr: { vi: "Chúng tôi so sánh thời gian hoàn thành nhiệm vụ bằng [[paired t-test]].",
+              es: "Comparamos los tiempos de finalización de la tarea con una [[paired t-test]].",
+              zh: "我们使用[[paired t-test]]比较任务完成时间。",
+              hi: "हमने [[paired t-test]] का उपयोग करके कार्य पूरा करने के समय की तुलना की।",
+              ko: "[[paired t-test]] 방법으로 과제 완료 시간을 비교했습니다." } },
+      { en: "The difference was statistically significant, with a [[p-value]] below 0.05.",
+        tr: { vi: "Sự khác biệt có ý nghĩa thống kê, với [[p-value]] nhỏ hơn 0,05.",
+              es: "La diferencia fue estadísticamente significativa, con un [[p-value]] menor que 0,05.",
+              zh: "该差异具有统计显著性，[[p-value]]小于0.05。",
+              hi: "अंतर सांख्यिकीय रूप से महत्वपूर्ण था, जिसमें [[p-value]] 0.05 से कम था।",
+              ko: "그 차이는 [[p-value]] < 0.05로 통계적으로 유의했습니다." } },
+      { en: "We also report the [[effect size]] so readers can judge practical importance.",
+        tr: { vi: "Chúng tôi cũng báo cáo [[effect size]] để người đọc có thể đánh giá tầm quan trọng thực tế.",
+              es: "También informamos el [[effect size]] para que los lectores puedan juzgar la importancia práctica.",
+              zh: "我们还报告了[[effect size]]，以便读者判断其实际意义。",
+              hi: "हम [[effect size]] भी बताते हैं ताकि पाठक व्यावहारिक महत्व का आकलन कर सकें।",
+              ko: "독자가 실질적인 중요성을 판단할 수 있도록 [[effect size]]도 함께 보고합니다." } }
+    ],
+    terms: {
+      "within-subjects":  { vi: "nội chủ thể", es: "intrasujetos", zh: "被试内", hi: "अंतः-विषय", ko: "피험자 내" },
+      "counterbalanced":  { vi: "cân bằng chéo", es: "contrabalanceado", zh: "平衡", hi: "प्रति-संतुलित", ko: "역균형화" },
+      "learning effects": { vi: "hiệu ứng học tập", es: "efectos de aprendizaje", zh: "学习效应", hi: "सीखने के प्रभाव", ko: "학습 효과" },
+      "paired t-test":    { vi: "kiểm định t ghép cặp", es: "prueba t pareada", zh: "配对t检验", hi: "युग्मित t-परीक्षण", ko: "대응표본 t검정" },
+      "p-value":          { vi: "giá trị p", es: "valor p", zh: "p值", hi: "p-मान", ko: "p값" },
+      "effect size":      { vi: "độ lớn hiệu ứng", es: "tamaño del efecto", zh: "效应量", hi: "प्रभाव आकार", ko: "효과 크기" }
+    },
+    quiz: [
+      { q: "Why was the order of conditions counterbalanced?", options: ["To increase the number of participants", "To reduce learning effects", "To compute the p-value", "To shorten the tasks"], answer: 1 },
+      { q: "What does reporting the effect size help readers judge?", options: ["Whether the study was within-subjects", "How many participants there were", "Practical importance", "The order of conditions"], answer: 2 }
+    ]
+  }
+];
+
+/* Levels used in the study. Each one sets how terms are shown and what share of sentences switch to English. */
+const LEVELS = [
+  { name: "All native: everything translated",            termMode: "native",  share: 0 },
+  { name: "Native, English terms in brackets",            termMode: "gloss",   share: 0 },
+  { name: "Native text, technical terms in English",      termMode: "english", share: 0 },
+  { name: "Mixed: 25% of sentences in English",           termMode: "english", share: 25 },
+  { name: "Mixed: 50% of sentences in English",           termMode: "english", share: 50 },
+  { name: "Mixed: 75% of sentences in English",           termMode: "english", share: 75 },
+  { name: "All English",                                  termMode: "english", share: 100 }
+];
+/* 12-week schedule: week 1 starts at "terms in English" (level 2) and reaches full English by week 12. */
+const weekToLevel = w => Math.min(6, 2 + Math.round((Math.max(1, Math.min(12, w)) - 1) * 4 / 11));
+
+/* ===================================================================== */
+
+const $ = id => document.getElementById(id);
+const TERM_RE = /\[\[(.+?)\]\]/g;
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("taper:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("taper:" + k, JSON.stringify(v)); } catch {} }
+};
+
+const state = Object.assign({
+  passageId: PASSAGES[0].id, lang: "vi", level: 2, termMode: "english", share: 0,
+  custom: false, showOriginal: true, stacked: false, linkHover: true, week: 1
+}, store.get("ui", {}));
+let lookupsThisView = 0;
+let viewKey = null;
+
+/* ---------- integrity check ---------- */
+function checkPassage(p) {
+  const problems = [];
+  p.sentences.forEach((s, i) => {
+    const enKeys = [...s.en.matchAll(TERM_RE)].map(m => m[1]);
+    enKeys.forEach(k => { if (!p.terms[k]) problems.push(`sentence ${i + 1}: "${k}" missing from terms`); });
+    Object.entries(s.tr).forEach(([lang, t]) => {
+      [...t.matchAll(TERM_RE)].forEach(m => {
+        if (!p.terms[m[1]]) problems.push(`sentence ${i + 1} (${lang}): "${m[1]}" missing from terms`);
+        if (!enKeys.includes(m[1])) problems.push(`sentence ${i + 1} (${lang}): "${m[1]}" not in the English sentence`);
+      });
+    });
+  });
+  problems.forEach(msg => console.warn(`[TAPER] ${p.id}: ${msg}`));
+  return problems.length === 0;
+}
+PASSAGES.forEach(checkPassage);
+
+const passage = () => PASSAGES.find(p => p.id === state.passageId) || PASSAGES[0];
+const langsFor = p => Object.keys(LANGS).filter(l => p.sentences.every(s => s.tr[l]));
+const words = s => s.replace(TERM_RE, "$1").trim().split(/\s+/).filter(Boolean).length;
+
+/* ---------- lookup counter: resets when the passage, language or level changes ---------- */
+function openView() {
+  const key = [state.passageId, state.lang, state.termMode, state.share, state.showOriginal].join("|");
+  if (key === viewKey) return;
+  viewKey = key;
+  lookupsThisView = 0;
+  $("lookups").textContent = 0;
+}
+
+/* ---------- rendering the reader ---------- */
+let currentNativePct = 0;
+function englishSentenceSet(p, share) {
+  // Shortest sentences switch to English first, so early English is the easiest English.
+  const order = p.sentences.map((s, i) => ({ i, w: words(s.en) })).sort((a, b) => a.w - b.w || a.i - b.i).map(o => o.i);
+  return new Set(order.slice(0, Math.round(p.sentences.length * share / 100)));
+}
+function termEl(key, display, cls, p, gloss) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "term " + cls;
+  b.dataset.term = key;
+  b.append(display);
+  if (gloss) { const g = document.createElement("span"); g.className = "gl"; g.textContent = " (" + gloss + ")"; b.append(g); }
+  return b;
+}
+function fillSentence(span, text, render) {
+  let last = 0;
+  for (const m of text.matchAll(TERM_RE)) {
+    span.append(text.slice(last, m.index));
+    span.append(render(m[1]));
+    last = m.index + m[0].length;
+  }
+  span.append(text.slice(last));
+}
+function renderReader() {
+  const p = passage();
+  const L = state.lang;
+  const enSet = englishSentenceSet(p, state.share);
+  const nat = $("nativeText"), eng = $("englishText");
+  nat.replaceChildren(); eng.replaceChildren();
+  nat.lang = state.share >= 100 ? "en" : LANGS[L].tag;
+  $("panelNative").lang = LANGS[L].tag;
+
+  let total = 0, native = 0;
+  p.sentences.forEach((s, i) => {
+    const w = words(s.en); total += w;
+    const sn = document.createElement("span");
+    sn.className = "sent"; sn.dataset.s = i;
+    if (enSet.has(i)) {
+      sn.classList.add("as-en"); sn.lang = "en";
+      fillSentence(sn, s.en, k => termEl(k, k, "en-term", p));
+    } else {
+      let termWords = 0;
+      fillSentence(sn, s.tr[L], k => {
+        if (state.termMode === "native") return termEl(k, p.terms[k][L], "native-term", p);
+        if (state.termMode === "gloss") return termEl(k, p.terms[k][L], "native-term", p, k);
+        termWords += k.split(/\s+/).length;
+        const t = termEl(k, k, "", p); t.lang = "en"; return t;
+      });
+      native += Math.max(0, w - termWords);
+    }
+    nat.append(sn, " ");
+
+    const se = document.createElement("span");
+    se.className = "sent"; se.dataset.s = i;
+    fillSentence(se, s.en, k => termEl(k, k, "en-term", p));
+    eng.append(se, " ");
+  });
+
+  currentNativePct = total ? Math.round(100 * native / total) : 0;
+  $("nativeTitle").textContent = state.share >= 100 ? p.title.en : (p.title[L] || p.title.en);
+  $("englishTitle").textContent = p.title.en;
+  const tm = { native: "terms translated", gloss: "English terms in brackets", english: "English technical terms" }[state.termMode];
+  $("nativeSub").textContent = state.share >= 100 ? "English" : `${LANGS[L].name} + ${tm}${state.share ? ` · ${state.share}% English sentences` : ""}`;
+  $("panelEnglish").hidden = !state.showOriginal;
+  $("panels").className = "panels" + (state.stacked ? " stacked" : "") + (state.showOriginal ? "" : " single");
+
+  $("sharePct").textContent = currentNativePct + "%";
+  $("shareFill").style.width = currentNativePct + "%";
+  $("shareMark").style.left = `calc(${currentNativePct}% - 1.5px)`;
+  $("langEnd").textContent = LANGS[L].name;
+  $("weekLabel").textContent = `Week ${state.week} of 12 · schedule suggests level ${weekToLevel(state.week)}`;
+  openView();
+}
+
+function renderControls() {
+  const p = passage();
+  const ps = $("passage"); ps.replaceChildren();
+  PASSAGES.forEach(x => ps.add(new Option(x.title.en, x.id)));
+  ps.value = p.id;
+  const ls = $("lang"); ls.replaceChildren();
+  const avail = langsFor(p);
+  if (!avail.includes(state.lang)) state.lang = avail[0];
+  avail.forEach(l => ls.add(new Option(`${LANGS[l].name} · ${LANGS[l].self}`, l)));
+  ls.value = state.lang;
+  $("level").value = state.level;
+  $("levelName").textContent = state.custom ? "Custom" : LEVELS[state.level].name;
+  $("termMode").value = state.termMode;
+  $("share").value = state.share;
+  $("shareVal").textContent = state.share + "%";
+  $("week").value = state.week;
+  $("showOriginal").checked = state.showOriginal;
+  $("stacked").checked = state.stacked;
+  $("linkHover").checked = state.linkHover;
+  $("level").style.opacity = state.custom ? .5 : 1;
+}
+
+function renderQuiz() {
+  const p = passage(), q = $("quiz");
+  q.replaceChildren();
+  (p.quiz || []).forEach((item, qi) => {
+    const fs = document.createElement("fieldset"); fs.className = "q";
+    const lg = document.createElement("legend"); lg.textContent = `${qi + 1}. ${item.q}`; fs.append(lg);
+    const opts = document.createElement("div"); opts.className = "opts"; opts.style.display = "grid"; opts.style.gap = "4px";
+    item.options.forEach((o, oi) => {
+      const lab = document.createElement("label");
+      const r = document.createElement("input"); r.type = "radio"; r.name = "quiz" + qi; r.value = oi; r.id = `quiz${qi}_${oi}`;
+      lab.append(r, " " + o); opts.append(lab);
+    });
+    fs.append(opts); q.append(fs);
+  });
+  if (!(p.quiz || []).length) {
+    const n = document.createElement("p"); n.className = "hint"; n.style.margin = 0;
+    n.textContent = "This passage has no comprehension questions.";
+    q.append(n);
+  }
+  $("checkResult").textContent = ""; $("checkResult").className = "result";
+  setReading(true);
+  document.querySelectorAll('#checkin input[type="radio"]').forEach(r => { r.checked = false; });
+}
+
+/* ---------- interactions ---------- */
+function rerender() {
+  store.set("ui", state);
+  setReading(true);
+  renderControls(); renderReader();
+}
+$("passage").onchange = e => { state.passageId = e.target.value; renderControls(); renderQuiz(); rerender(); };
+$("lang").onchange = e => { state.lang = e.target.value; rerender(); };
+$("level").oninput = e => {
+  const lv = LEVELS[+e.target.value];
+  Object.assign(state, { level: +e.target.value, termMode: lv.termMode, share: lv.share, custom: false });
+  rerender();
+};
+$("termMode").onchange = e => { state.termMode = e.target.value; state.custom = true; rerender(); };
+$("share").oninput = e => { state.share = +e.target.value; state.custom = true; rerender(); };
+$("week").onchange = e => { state.week = Math.max(1, Math.min(12, +e.target.value || 1)); rerender(); };
+$("applyWeek").onclick = () => {
+  const lv = weekToLevel(state.week), L = LEVELS[lv];
+  Object.assign(state, { level: lv, termMode: L.termMode, share: L.share, custom: false });
+  rerender();
+};
+$("showOriginal").onchange = e => { state.showOriginal = e.target.checked; rerender(); };
+$("stacked").onchange = e => { state.stacked = e.target.checked; rerender(); };
+$("linkHover").onchange = e => { state.linkHover = e.target.checked; store.set("ui", state); };
+
+// Linked highlighting across the two panels.
+function clearHl() { document.querySelectorAll(".hl, .shl").forEach(n => n.classList.remove("hl", "shl")); }
+document.addEventListener("mouseover", e => {
+  const t = e.target.closest(".term"), s = e.target.closest(".sent");
+  clearHl();
+  if (t) document.querySelectorAll(`.term[data-term="${CSS.escape(t.dataset.term)}"]`).forEach(n => n.classList.add("hl"));
+  if (s && state.linkHover) document.querySelectorAll(`.sent[data-s="${s.dataset.s}"]`).forEach(n => n.classList.add("shl"));
+});
+
+// Term popover: shows both forms and counts as a lookup.
+let pop = null;
+function closePop() { if (pop) { pop.remove(); pop = null; } }
+document.addEventListener("click", e => {
+  const t = e.target.closest(".term");
+  if (!t) { if (pop && !e.target.closest(".pop")) closePop(); return; }
+  closePop();
+  const p = passage(), key = t.dataset.term, nat = p.terms[key]?.[state.lang];
+  pop = document.createElement("div"); pop.className = "pop"; pop.setAttribute("role", "dialog");
+  const a = document.createElement("span"); a.className = "label"; a.textContent = "Technical term";
+  const en = document.createElement("span"); en.className = "en"; en.lang = "en"; en.textContent = key;
+  const na = document.createElement("span"); na.className = "na"; na.lang = LANGS[state.lang].tag; na.textContent = nat || "—";
+  const where = p.sentences.filter(s => s.en.includes(`[[${key}]]`)).length;
+  const meta = document.createElement("span"); meta.className = "status"; meta.textContent = `${LANGS[state.lang].name} · appears in ${where} sentence${where === 1 ? "" : "s"}`;
+  pop.append(a, en, na, meta);
+  document.body.append(pop);
+  const r = t.getBoundingClientRect(), pr = pop.getBoundingClientRect();
+  pop.style.left = Math.max(16, Math.min(innerWidth - pr.width - 16, r.left)) + "px";
+  pop.style.top = (r.bottom + 8 + pr.height > innerHeight ? r.top - pr.height - 8 : r.bottom + 8) + "px";
+  lookupsThisView++; $("lookups").textContent = lookupsThisView;
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") closePop(); });
+addEventListener("scroll", closePop, { passive: true });
+
+function setReading(on) {
+  ["panels", "doneRow"].forEach(id => { $(id).hidden = !on; });
+  document.querySelector(".share").hidden = !on;
+  $("checkin").hidden = on;
+}
+$("doneReading").onclick = () => setReading(false);
+$("backToText").onclick = () => setReading(true);
+$("submitCheck").onclick = () => {
+  const p = passage();
+  const pick = n => { const r = document.querySelector(`input[name="${n}"]:checked`); return r ? r.value : null; };
+  const answers = (p.quiz || []).map((item, i) => { const v = pick("quiz" + i); return v == null ? null : +v; });
+  if (answers.includes(null)) {
+    $("checkResult").className = "result bad"; $("checkResult").textContent = "Answer every question first."; return;
+  }
+  const correct = answers.filter((a, i) => a === p.quiz[i].answer).length;
+  $("checkResult").className = "result ok";
+  $("checkResult").textContent = answers.length ? `${correct} of ${answers.length} correct.` : "";
+};
+
+/* ---------- start ---------- */
+renderControls(); renderQuiz(); renderReader();
+</script>
+</body>
+</html>
