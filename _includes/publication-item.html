@@ -1,0 +1,17 @@
+{% assign pub = include.pub %}{% assign pub_id = pub.id | slugify %}
+<li class="pub">
+  <div class="pub__badge"><span>{{ pub.abbr | default: "Paper" }}</span></div>
+  <div class="pub__body">
+    <div class="pub__title">
+      {% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+    </div>
+    <div class="pub__authors">{% include pub-authors.html authors=pub.authors %}</div>
+    <div class="pub__venue">{{ pub.venue }}, {{ pub.date | date: "%Y" }}</div>
+    <div class="pub__links">
+      {% if pub.paperurl %}<a class="pub__btn" href="{{ pub.paperurl }}">Paper</a>{% endif %}
+      {% if pub.code %}<a class="pub__btn" href="{{ pub.code }}">Code</a>{% endif %}
+      {% if pub.summary %}<button type="button" class="pub__btn pub__toggle" aria-expanded="false" aria-controls="tldr-{{ pub_id }}">TL;DR</button>{% endif %}
+    </div>
+    {% if pub.summary %}<p class="pub__summary" id="tldr-{{ pub_id }}" hidden>{{ pub.summary }}</p>{% endif %}
+  </div>
+</li>

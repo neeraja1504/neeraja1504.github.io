@@ -7,15 +7,13 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am an incoming Computer Science Ph.D. student at Texas A&M University, where I am fortunate to be advised by [Prof. Kuan-Hao Huang](https://khhuang.me/). My research focuses on understanding *how* large language models represent and process information internally, using those insights to make them fundamentally more reliable, safe, and controllable. My broader research interests span mechanistic interpretability, cross-lingual generalization, and hallucination detection, with the long-term goal of building AI systems that are transparent by design.
+I am a first-year Computer Science Ph.D. student at Texas A&M University, advised by [Prof. Kuan-Hao Huang](https://khhuang.me/). Broadly, my research is in **AI safety and interpretability**: I study *how* large language models represent and process information internally, and use those insights to make them more reliable and controllable, from reducing sycophancy and hallucination to steering how models handle different languages.
 
-Prior to starting my Ph.D., I completed my M.S. at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek). My master's research focused on [hallucination detection via hidden-state probing](https://arxiv.org/pdf/2410.02899) and understanding [adversarial jailbreaking dynamics](https://arxiv.org/pdf/2501.14073).
+Before my Ph.D., I completed my M.S. at UIUC with [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek), and worked as an AI/ML Research Engineer at [MathGPT.ai](https://mathgpt.ai). Outside research, you can find me lifting at the gym or hunting down the best food spots in town.
 
-Alongside my academic track, I previously worked as a Research Engineer at [MathGPT.ai](https://mathgpt.ai), where I developed education-centric reasoning benchmarks to evaluate how minor linguistic or contextual changes can destabilize model reasoning, and explored how fine-tuning Small Language Models (SLMs) can improve consistency in tutoring applications ([paper](https://arxiv.org/pdf/2510.06430)). Earlier in my research journey, I was a Post-Baccalaureate Research Fellow at RBCDSAI, IIT Madras, working with [Prof. Balaraman Ravindran](http://www.cse.iitm.ac.in/~ravi/) and [Dr. Ashish Tendulkar](https://www.linkedin.com/in/ashishtendulkar/).
+I'm always happy to chat about research. Feel free to reach out via [email](mailto:kirtane.neeraja@gmail.com) or see my [CV](/files/NeerajaKiranKirtane_CV.pdf).
 
-When I'm not looking at hidden states or training classifiers, you can find me lifting at the gym or hunting down the best food spots in town.
-
-**Let's Connect!** If you are interested in collaborating on mechanistic interpretability, model controllability, or LLM safety, please feel free to reach out via [Email](mailto:kirtane.neeraja@gmail.com) or view my [CV](https://neeraja1504.github.io/files/NeerajaKiranKirtane_CV.pdf).
+{% include home-sections.html sections="Education,Experience" %}
 
 <!-- I'm Neeraja Kirtane, a researcher focused on understanding *how* large language models represent and process information and using that understanding to make them more reliable, safe, and controllable. My work spans mechanistic interpretability, cross-lingual generalization, and hallucination detection, with a long-term goal of building AI systems that are transparent by design.
 

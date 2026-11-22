@@ -1,0 +1,32 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign years = pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
+
+<p class="pub-note">
+  <sup>*</sup> Equal contribution{% if site.author.googlescholar %} &middot; Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}
+</p>
+
+{% for year in years %}
+<section class="pub-year">
+  <h2 class="pub-year__label">{{ year.name }}</h2>
+  <ol class="pub-list">
+    {% for pub in year.items %}{% include publication-item.html pub=pub %}{% endfor %}
+  </ol>
+</section>
+{% endfor %}
+
+<script>
+  document.querySelectorAll('.pub__toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
+  });
+</script>

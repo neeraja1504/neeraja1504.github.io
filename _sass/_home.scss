@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Homepage sections (Education, Experience, Publications link)
+   Shares colors with _publications.scss
+   ========================================================================== */
+
+.home { margin-top: 2.5em; }
+
+.home-section { margin-top: 2.25em; }
+
+.home-section__label {
+  margin: 0 0 0.25em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid $border-color;
+  color: $gray;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25em;
+  margin: 0;
+  padding: 0.75em 0;
+  border-bottom: 1px solid $pub-rule;
+
+  &:last-child { border-bottom: 0; }
+}
+
+.home-entry__main { flex: 1; min-width: 0; }
+
+.home-entry__place {
+  color: $darker-gray;
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.4;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover { color: $link-color-hover; text-decoration: underline; }
+  }
+}
+
+.home-entry__title {
+  color: $dark-gray;
+  font-size: 0.875em;
+  line-height: 1.45;
+}
+
+.home-entry__detail {
+  margin-top: 0.1em;
+  color: $gray;
+  font-size: 0.8em;
+  line-height: 1.45;
+}
+
+.home-entry__dates {
+  flex: none;
+  color: $gray;
+  font-size: 0.8em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.home-pubs {
+  margin: 0.75em 0 0;
+  color: $dark-gray;
+  font-size: 0.9em;
+}
+
+.home-pubs__link {
+  display: inline-block;
+  color: $pub-accent !important;
+  font-weight: 600;
+  text-decoration: none !important;
+
+  &:hover { text-decoration: underline !important; }
+}
+
+@media (max-width: 600px) {
+  .home-entry { flex-direction: column; gap: 0.15em; }
+  .home-entry__dates { order: -1; }
+}

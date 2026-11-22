@@ -1,0 +1,1 @@
+{% comment %} Renders an author string: "*" becomes a superscript and the site author's name is bolded. {% endcomment %}{% assign me = site.author.name %}{% assign me_bold = '<strong>' | append: me | append: '</strong>' %}{{ include.authors | replace: "*", "<sup>*</sup>" | replace: me, me_bold }}

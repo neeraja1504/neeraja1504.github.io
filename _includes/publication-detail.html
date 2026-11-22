@@ -1,0 +1,11 @@
+{% assign pub = include.pub %}
+<div class="pub-detail">
+  <p class="pub__authors">{% include pub-authors.html authors=pub.authors %}</p>
+  <p class="pub__venue">{{ pub.venue }}, {{ pub.date | date: "%Y" }}</p>
+  {% if pub.summary %}<p class="pub-detail__summary">{{ pub.summary }}</p>{% endif %}
+  <div class="pub__links">
+    {% if pub.paperurl %}<a class="pub__btn" href="{{ pub.paperurl }}">Paper</a>{% endif %}
+    {% if pub.code %}<a class="pub__btn" href="{{ pub.code }}">Code</a>{% endif %}
+    <a class="pub__btn" href="{{ site.baseurl }}/publications/">All publications</a>
+  </div>
+</div>

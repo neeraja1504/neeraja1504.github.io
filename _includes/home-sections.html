@@ -1,0 +1,26 @@
+<div class="home">
+{% assign sections = include.sections | split: "," %}{% for section in sections %}{% assign key = section | downcase %}{% assign entries = site.data.home[key] %}
+<section class="home-section" id="{{ key }}">
+  <h2 class="home-section__label">{{ section }}</h2>
+  <ul class="home-list">
+    {% for e in entries %}
+    <li class="home-entry">
+      <div class="home-entry__main">
+        <div class="home-entry__place">{% if e.url %}<a href="{{ e.url }}">{{ e.place }}</a>{% else %}{{ e.place }}{% endif %}</div>
+        <div class="home-entry__title">{{ e.title }}</div>
+        {% if e.detail %}<div class="home-entry__detail">{{ e.detail }}</div>{% endif %}
+      </div>
+      <div class="home-entry__dates">{{ e.dates }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+<section class="home-section" id="publications">
+  <h2 class="home-section__label">Publications</h2>
+  <p class="home-pubs">
+    <a class="home-pubs__link" href="{{ site.baseurl }}/publications/">Click here for publications&nbsp;&rarr;</a>
+  </p>
+</section>
+</div>
