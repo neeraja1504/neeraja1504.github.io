@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Sidebar profile (overrides _sidebar.scss; colors shared with _publications.scss)
+   ========================================================================== */
+
+.sidebar .profile {
+  .author__avatar {
+    width: 52px;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .author__name {
+    color: $darker-gray;
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .author__bio {
+    margin: 0.2em 0 0;
+    color: $dark-gray;
+    font-size: 0.8em;
+    line-height: 1.45;
+  }
+
+  .author__location {
+    margin: 0.35em 0 0;
+    color: $gray;
+    font-size: 0.75em;
+
+    i { margin-right: 0.15em; }
+  }
+
+  .author__urls {
+    li { font-size: 0.85em; }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      margin: 0;
+      padding: 0.3em 0;
+      color: $dark-gray;
+      font-size: 1em;
+      text-decoration: none;
+      transition: color 0.15s;
+
+      i {
+        width: 1.15em;
+        color: $gray !important;
+        text-align: center;
+        transition: color 0.15s;
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: $pub-accent;
+        text-decoration: none;
+
+        i { color: $pub-accent !important; }
+      }
+    }
+  }
+
+  @include breakpoint($large) {
+    padding-right: 1.5em;
+
+    .author__avatar {
+      width: auto;
+
+      img {
+        width: 150px;
+        box-shadow: 0 0 0 4px #fff, 0 0 0 5px $border-color;
+      }
+    }
+
+    .author__name {
+      margin: 1.1em 0 0;
+      font-size: 1.2em;
+    }
+
+    .author__bio { margin-top: 0.4em; font-size: 0.85em; }
+
+    .author__urls-wrapper {
+      margin-top: 1.1em;
+      padding-top: 0.9em;
+      border-top: 1px solid $border-color;
+    }
+  }
+}
