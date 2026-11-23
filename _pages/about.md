@@ -7,11 +7,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am a first-year Computer Science Ph.D. student at Texas A&M University, advised by [Prof. Kuan-Hao Huang](https://khhuang.me/). Broadly, my research is in **AI safety and interpretability**: I study *how* large language models represent and process information internally, and use those insights to make them more reliable and controllable, from reducing sycophancy and hallucination to steering how models handle different languages.
+I am a first-year Computer Science Ph.D. student at Texas A&M University, advised by [Prof. Kuan-Hao Huang](https://khhuang.me/). I work on **AI safety and interpretability**. My past projects include [hallucination detection](https://arxiv.org/pdf/2410.02899), [persuasion-based jailbreaking](https://arxiv.org/pdf/2501.14073), and [improving multilingual performance with steering vectors](https://arxiv.org/abs/2602.02326). Currently, I'm studying how sycophancy arises in multi-agent systems.
 
-Before my Ph.D., I completed my M.S. at UIUC with [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek), and worked as an AI/ML Research Engineer at [MathGPT.ai](https://mathgpt.ai). Outside research, you can find me lifting at the gym or hunting down the best food spots in town.
+Before my Ph.D., I completed my M.S. at UIUC with [Prof. Hao Peng](https://haopeng-nlp.github.io/) and [Prof. Dilek Hakkani-Tür](https://siebelschool.illinois.edu/about/people/all-faculty/dilek), and worked as an AI/ML Research Engineer at [MathGPT.ai](https://mathgpt.ai). Outside research, you can find me hunting down the best food spots in town.
 
-I'm always happy to chat about research. Feel free to reach out via [email](mailto:kirtane.neeraja@gmail.com) or see my [CV](/files/NeerajaKiranKirtane_CV.pdf).
+I'm always happy to chat about research. If you're working on related problems or hiring research interns for Summer 2027, please reach out by [email](mailto:kirtane.neeraja@gmail.com) or see my [CV](/files/NeerajaKiranKirtane_CV.pdf).
 
 {% include home-sections.html sections="Education,Experience" %}
 
